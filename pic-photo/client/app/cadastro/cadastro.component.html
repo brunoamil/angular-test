@@ -1,5 +1,6 @@
 <div class="container">
     <h1 class="text-center">{{foto.titulo}}</h1>
+    <span *ngIf="mensagem.length" class="alert alert-info">{{mensagem}}</span> 
     <form [formGroup]="meuForm" class="row" (submit)="cadastrar($event)">
         <div class="col-md-6">
             <div class="form-group">
@@ -19,10 +20,9 @@
                     <label>Descrição</label>
                     <textarea formControlName="descricao" name="descricao" [(ngModel)]="foto.descricao"  class="form-control"  autocomplete="off">
                     </textarea>
-
-                <button type="submit" class="btn btn-primary" [disabled]="meuForm.invalid">
-                    Salvar
-                </button>
+                
+                <botao nome="Salvar" estilo="btn-primary" tipo="submit" [desabilitado]="meuForm.invalid"></botao>
+              
                 <a [routerLink]="['']" class="btn btn-primary">Voltar</a>
             </div>
         </div>
