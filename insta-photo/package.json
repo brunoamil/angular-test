@@ -1,5 +1,5 @@
 {
-  "name": "insta-photo",
+  "name": "alurapic",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -23,6 +23,7 @@
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
+    "jwt-decode": "^2.2.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

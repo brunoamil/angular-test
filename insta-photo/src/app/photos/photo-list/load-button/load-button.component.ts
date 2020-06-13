@@ -6,12 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./load-button.component.css']
 })
 export class LoadButtonComponent implements OnInit {
- 
-    @Input() hasMore:  boolean = true;
 
-    constructor() { }
+  @Input() hasMore: boolean = false;
 
-    ngOnInit() {
-    }
+  constructor() { }
+
+  ngOnInit() {
+  }
 
 }
