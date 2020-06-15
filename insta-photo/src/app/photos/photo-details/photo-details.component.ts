@@ -38,4 +38,12 @@ export class PhotoDetailsComponent implements OnInit {
                 this.alertService.warning("Nao foi possivel remover a foto", true);
             });
         }
+
+    like(photo: Photo) {
+        this.photoService.like(photo.id).subscribe(liked => {
+            if(liked){
+                this.photo$ = this.photoService.findById(photo.id);
+            }
+        });
+    }
 }
