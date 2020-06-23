@@ -14,7 +14,7 @@ export class PhotoService {
     }
 
     listFromUser(userName: string) {
-        const listaDeFotos = this.http.get<Photo[]>(API + '/flavio/photos');
+        const listaDeFotos = this.http.get<Photo[]>(API + '/' + userName + '/photos');
         
         return listaDeFotos;
     
